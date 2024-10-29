@@ -1,0 +1,12 @@
+def verifica_letra_a(texto):
+    count = texto.lower().count('a') 
+    if count > 0:
+        print(f"A letra 'a' aparece {count} vezes na string.")
+    else:
+        print("A letra 'a' não aparece na string.")
+
+# Entrada do usuário
+texto = input("Informe uma string para verificar a ocorrência da letra 'a': ")
+
+# Chamada da função
+verifica_letra_a(texto)
