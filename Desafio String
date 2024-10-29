@@ -1,12 +1,24 @@
-def verifica_letra_a(texto):
-    count = texto.lower().count('a') 
-    if count > 0:
-        print(f"A letra 'a' aparece {count} vezes na string.")
-    else:
-        print("A letra 'a' não aparece na string.")
+#include <stdio.h>
+#include <string.h>
 
-# Entrada do usuário
-texto = input("Informe uma string para verificar a ocorrência da letra 'a': ")
+int main() {
+    char texto[100];
+    int count = 0;
 
-# Chamada da função
-verifica_letra_a(texto)
+    printf("Informe uma string: ");
+    fgets(texto, sizeof(texto), stdin);
+    
+    for (int i = 0; i < strlen(texto); i++) {
+        if (texto[i] == 'a' || texto[i] == 'A') {
+            count++;
+        }
+    }
+
+    if (count > 0) {
+        printf("A letra 'a' aparece %d vezes na string.\n", count);
+    } else {
+        printf("A letra 'a' não aparece na string.\n");
+    }
+
+    return 0;
+}
